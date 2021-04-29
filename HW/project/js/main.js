@@ -76,10 +76,11 @@ let getRequest = (url) => {
   }
 
   class ProductList {
-    constructor(container = '.products') {
+    constructor(basket, container = '.products') {
       this.container = container;
       this._goods = []; // data
       this._allProducts = []; // массив экземпляров товаров на основе this.
+      this.basket = basket;
       document.querySelector('.products').addEventListener('click', (event) => {
         if(event.target.className == 'buy-btn') {
           const id = event.target.parentElement.parentElement.dataset.id;
@@ -114,8 +115,7 @@ let getRequest = (url) => {
     }
   
     addToBasket(item) {
-      basketArr.push(item);
-      console.log(basketArr);
+      this.basket.addItem(item);
     }
   }
   
@@ -152,8 +152,6 @@ class Basket {
           this.countGoods = data.countGoods;
   //        this._renderTotal();
           this._basketGoods = data.contents;
-          basketArr = this._basketGoods;
-          console.log(basketArr);
  //         this._render();
         });
   }
@@ -164,11 +162,17 @@ class Basket {
 
   addItem(item){
     this._basketGoods.push(item);
+    console.log(this._basketGoods);
+    this._render();
+  }
+
+  removeItem(item){
+    
   }
 
   _render() {
     const blockBasket = document.querySelector(this.container);
-
+    blockBasket.innerHTML = '';
     for (const product of this._basketGoods) {
       const productObject = new BasketItem(product);
       this._allBasketProducts.push(productObject);
@@ -201,9 +205,8 @@ class BasketItem {
   }
 }
 
-const basket = new Basket();
-let basketArr;
-const catalog = new ProductList();
+let basket = new Basket();
+let catalog = new ProductList(basket);
 
 // const products = [
 //   {id: 1, title: 'Notebook', price: 20000},
