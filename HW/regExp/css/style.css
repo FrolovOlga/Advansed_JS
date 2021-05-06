@@ -1,0 +1,60 @@
+body {
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+header {
+    display: flex;
+    background-color: #2f2a2d;
+    justify-content: space-between;
+    color: #fafafa;
+    padding: 30px 80px;
+}
+
+#btn1,
+#btn2,
+#btn3 {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+h3 {
+    text-align: center;
+}
+
+
+#quotes {
+    margin: 10px 10px 10px 10px;
+    width: 600px;
+}
+
+button {
+    outline: none;
+}
+
+p {
+    margin: 0 0 5px 0;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+#form {
+    width: 400px;
+    background-color: lightgrey;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+.error {
+    border-color: red;
+    color: red;
+
+}
+
+#mail::placeholder,
+#phone::placeholder {
+    color: lightgrey;
+}

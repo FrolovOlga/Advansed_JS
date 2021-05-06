@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регулярные выражения</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header>
+    <h2>Заполните форму</h2>
+</header>
+<main>
+  <button id = 'btn1'>Задание 1</button>
+  <button id = 'btn2'>Задание 2</button>
+  <button id = 'btn3'>Задание 3</button>
+  <div id = 'quotes'></div>
+    <form id = "form">
+      <h3>Заполните форму</h3>
+    <br>
+    <p><b>Ваше имя</b><br>
+    <input  id = 'name' type="text" size = "40">
+  </p>
+  <p><b>Телефон</b><br>
+    <input id = 'phone' type="text" size = "15" placeholder="+7(000)000-0000">
+  </p>
+  <p><b>E-mail</b><br>
+    <input  id = 'mail' type = "text" size = "40" placeholder="mymail@mail.ru">
+  </p>
+  <p><b>Комментарий</b><br>
+    <textarea id = 'txt' type="text" cols = "40" rows = "5"></textarea>
+  </p>
+  <p>
+    <input id = 'btn' type = "button" value="Отправить">
+  </p>
+  </form>
+</main>
+<script >
+
+const text = `<p>One: 'Hi Mary.' Two: 'Oh, hi.'</p>
+<p>One: 'How are you doing?'</p>
+<p>Two: 'I'm doing alright. How about you?'</p>
+<p>One: 'Not too bad. The weather is great isn't it?'</p>
+<p>Two: 'Yes. It's absolutely beautiful today.'</p>
+<p>One: 'I wish it was like this more frequently.'</p>
+<p>Two: 'Me too.'</p>
+<p>One: 'So where are you going now?'</p>
+<p>Two: 'I'm going to meet a friend of mine at the department store'</p>
+<p>One: 'Going to do a little shopping?'</p>
+<p>Two: 'Yeah, I have to buy some presents for my parents.'</p>
+<p>One: 'What's the occasion?'</p>
+<p>Two: 'It's their anniversary.'</p>
+<p>One: 'That's great. Well, you better get going. You don't want to be late.'</p>
+<p>Two: 'I'll see you next time.'</p>
+<p>One: 'Sure. Bye.'</p>`;
+
+const div = document.querySelector('#quotes');
+const btn = document.querySelector('#btn');
+const name = document.querySelector('#name');
+const phone = document.querySelector('#phone');
+const mail = document.querySelector('#mail');
+const txt = document.querySelector('#txt');
+// задание 1  
+document.querySelector('#btn1').addEventListener('click', () => {
+  div.innerHTML = '';
+  div.insertAdjacentHTML("afterbegin",  text.replace(/'/g, '"'));
+})
+
+// задание 2
+document.querySelector('#btn2').addEventListener('click', () => {
+  div.innerHTML = '';
+  div.insertAdjacentHTML("afterbegin",  text.replace(/\B'/g, '"'));
+})
+
+//Задание 3
+document.querySelector('#btn3').addEventListener('click', () => {
+  div.innerHTML = '';
+  document.querySelector('#form').reset();
+  name.classList.remove('error');
+  phone.classList.remove('error');
+  mail.classList.remove('error');
+});
+
+btn.addEventListener('click', () => {
+
+  if((name.value.match(/[^a-zA-Zа-яА-ЯёЁ]+/)) !== null || (name.value.length === 0)) {
+    name.classList.add('error');
+    name.value = 'Error';
+  } 
+  if((phone.value.match(/\+7\([0-9]{3}\)[0-9]{3}-[0-9]{4}/))=== null) {
+    phone.classList.add('error');
+    phone.value = 'Error';
+  } 
+  if((mail.value.match(/[a-z]+[\.-]?[a-z]+@[[a-z]+\.[a-z]/i)) === null) {
+    mail.classList.add('error');
+    mail.value = 'Error';
+  }
+});
+
+</script>
+</body>
+</html>
