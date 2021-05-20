@@ -1,0 +1,30 @@
+[
+  {
+    "id_product": 124,
+    "product_name": "Костюм",
+    "price": 12500,
+    "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, nobis. Impedit, consectetur. Exercitationem ad quas magnam tenetur esse nesciunt quia autem odit veritatis? Praesentium distinctio magnam voluptatum accusantium culpa recusandae soluta possimus! Saepe itaque magnam ratione sequi? Sunt, explicabo quaerat? Quas dolorum praesentium ipsum amet, autem inventore.",
+    "img": "https://life-instyle.com/component/joomgallery/image.raw?view=image&type=orig&id=36081&Itemid=219"
+  },
+  {
+    "id_product": 457,
+    "product_name": "Туника",
+    "price": 3000,
+    "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, nobis. Impedit, consectetur. Exercitationem ad quas magnam tenetur esse nesciunt quia autem odit veritatis? Praesentium distinctio magnam voluptatum accusantium culpa recusandae soluta possimus!",
+    "img": "https://life-instyle.com/component/joomgallery/image.raw?view=image&type=orig&id=36082&Itemid=219"
+  },
+  {
+    "id_product": 123,
+    "product_name": "Комбинезон",
+    "price": 6000,
+    "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, nobis. Impedit, consectetur. Exercitationem ad quas magnam tenetur esse nesciunt quia autem odit veritatis? Praesentium distinctio magnam voluptatum accusantium culpa recusandae soluta possimus! Saepe itaque magnam ratione sequi? Sunt, explicabo quaerat? Quas dolorum praesentium ipsum amet, autem inventore. Beatae hic praesentium dolorem officiis laudantium, harum minima necessitatibus temporibus a unde esse maiores ut modi repudiandae qui quos autem? Necessitatibus, quia adipisci.",
+    "img": "https://life-instyle.com/component/joomgallery/image.raw?view=image&type=img&id=36080"
+  },
+  {
+    "id_product": 456,
+    "product_name": "Пальто",
+    "price": 15000,
+    "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ratione fuga asperiores odit a impedit iusto qui reiciendis animi nobis molestias officia, quos cupiditate tenetur odio nam ex est officiis.",
+    "img": "https://www.pompa.ru/upload/iblock/333/1018924p10067_1.jpg"
+  }
+]
